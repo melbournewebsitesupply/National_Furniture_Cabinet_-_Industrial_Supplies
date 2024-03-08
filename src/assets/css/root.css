@@ -6,9 +6,9 @@
 @media only screen and (min-width: 0em) {
   :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --primary: #ff6a3e;
+    --primary: #3771ff;
     --primaryLight: #ffba43;
-    --secondary: #ffba43;
+    --secondary: #ff5252;
     --secondaryLight: #ffba43;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
@@ -70,8 +70,8 @@
     text-decoration: none;
     width: auto;
     padding: 0 1.875rem;
-    color: #000;
-    background-color: var(--primary);
+    color: #f7f7f7;
+    background-color: #ff5252;
     display: inline-block;
     position: relative;
     z-index: 1;

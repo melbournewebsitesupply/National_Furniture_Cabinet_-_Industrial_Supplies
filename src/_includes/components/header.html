@@ -6,7 +6,7 @@
   <div class="cs-container">
       <!--Nav Logo-->
       <a href="" class="cs-logo" aria-label="back to home">
-          <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/leaf-icon.png" width="60" height="60" aria-hidden="true" decoding="async">
+          <img src="/assets/images/Screen Shot 2024-03-06 at 2.03.20 am.png" width="60" height="60" aria-hidden="true" decoding="async">
       </a>
       <!--Navigation List-->
       <nav class="cs-nav" role="navigation">
@@ -22,44 +22,68 @@
           <div class="cs-ul-wrapper">
               <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                   <li class="cs-li">
-                      <a href="" class="cs-li-link cs-active">
+                      <a 
+                      href="/" class="cs-li-link {{'cs-active' if '' == page.fileSlug}}"
+                      >
                           Home
                       </a>
                   </li>
                   <li class="cs-li">
-                      <a href="" class="cs-li-link">
+                      <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">
                           About
                       </a>
                   </li>
                   <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
                   <li class="cs-li cs-dropdown" tabindex="0">
-                      <span class="cs-li-link">
-                          Menu
+                    <a  class="cs-li-link {{ 'cs-active' if page.fileSlug in ['all_products', 'screws', 'bolts', 'abrasives',  'staples_and_nails', 'nail_coils', 'cabinet_supplies', 'pins_and_staples', 'brads_and_staples'] else '' }}
+                    ">
+
+                          Product Range
                           <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                      </span>
+                      </a>
                       <ul class="cs-drop-ul">
                           <li class="cs-drop-li">
-                              <a href="" class="cs-li-link cs-drop-link">Breakfast</a>
+                              <a href="/screws" class="cs-li-link cs-drop-link {{'cs-active' if '' == page.fileSlug}}">Screws</a>
                           </li>
                           <li class="cs-drop-li">
-                              <a href="" class="cs-li-link cs-drop-link">Dinner</a>
+                              <a href="/bolts" class="cs-li-link cs-drop-link">Bolts</a>
                           </li>
+                          <li class="cs-drop-li">
+                            <a href="" class="cs-li-link cs-drop-link">Abrasives</a>
+                        </li>
+                        <li class="cs-drop-li">
+                            <a href="" class="cs-li-link cs-drop-link">Staples and Nails</a>
+                        </li>
+                        <li class="cs-drop-li">
+                            <a href="" class="cs-li-link cs-drop-link">Nail Coils</a>
+                        </li>
+                        <li class="cs-drop-li">
+                            <a href="" class="cs-li-link cs-drop-link">Cabinet Supplies</a>
+                        </li>
+                        <li class="cs-drop-li">
+                            <a href="" class="cs-li-link cs-drop-link">Pins and Staples</a>
+                        </li>
+                        <li class="cs-drop-li">
+                            <a href="" class="cs-li-link cs-drop-link">Brads and Staples</a>
+                        </li>
+                        <li class="cs-drop-li">
+                            <a href="" class="cs-li-link cs-drop-link">Rivets</a>
+                        </li>
+                        <li class="cs-drop-li">
+                            <a href="/all_products" class="cs-li-link cs-drop-link">View All Products</a>
+                        </li>
                       </ul>
                   </li>
+   
                   <li class="cs-li">
-                      <a href="" class="cs-li-link">
-                          Catering
-                      </a>
-                  </li>
-                  <li class="cs-li">
-                      <a href="" class="cs-li-link">
+                      <a href="/contact"  class="cs-li-link {{'cs-active' if 'contact' == page.fileSlug}}">
                           Contact
                       </a>
                   </li>
               </ul>
           </div>
       </nav>
-      <a href="" class="cs-button-solid cs-nav-button">Reservation</a>
+      <a href="" class="cs-button-solid cs-nav-button">Call Us</a>
       <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
       <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
           <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
