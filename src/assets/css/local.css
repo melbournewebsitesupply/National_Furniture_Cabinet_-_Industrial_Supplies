@@ -279,7 +279,7 @@
     position: relative;
   }
   #services-1644 .cs-icon {
-    width: 3rem;
+    width: 3.8rem;
     height: auto;
   }
   #services-1644 .cs-h2 {
@@ -964,6 +964,9 @@
   #sbs-1565 .cs-text:last-of-type {
     margin-bottom: 2rem;
   }
+  #sbs-1565 .link-text-in-paragraph {
+    color: #ff4747;
+  }
   #sbs-1565 .cs-card-group {
     width: 100%;
     max-width: 39.375rem;
@@ -1053,7 +1056,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    object-fit: cover;
   }
 }
 /* Tablet - 768px */
@@ -1081,6 +1083,9 @@
     width: 42%;
     /* -80px to -112px */
     margin-bottom: calc(clamp(5rem, 7vw, 7rem)*-1);
+  }
+  #sbs-1565 .cs-picture img {
+    object-fit: cover;
   }
 }
 /*-- -------------------------- -->
@@ -1166,6 +1171,7 @@
 @media only screen and (min-width: 0rem) {
   #collection-1579 {
     padding: var(--sectionPadding);
+    scroll-margin-top: 5rem;
   }
   #collection-1579 .cs-container {
     width: 100%;

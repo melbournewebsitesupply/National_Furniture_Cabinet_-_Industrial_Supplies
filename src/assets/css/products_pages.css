@@ -248,6 +248,8 @@ body.dark-mode .cs-button-solid:before {
     font-weight: 700;
     text-align: center;
     margin-top: 0.5rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
     color: #f7f7f7;
     min-width: 9.375rem;
     padding: 0 1.5rem;
@@ -279,6 +281,50 @@ body.dark-mode .cs-button-solid:before {
   }
   #ABoutRPsbs-328 .custom-button-solid:hover:before,
   #AboutRPsbsr-328 .custom-button-solid:hover:before {
+    width: 100%;
+  }
+  #ABoutRPsbs-328 .custom-button-orange,
+  #AboutRPsbsr-328 .custom-button-orange {
+    font-size: 0.875rem;
+    /* 46px - 56px */
+    line-height: clamp(1.875rem, 2.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    color: #f7f7f7;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: #ff7b00;
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #ABoutRPsbs-328 .custom-button-orange:before,
+  #AboutRPsbsr-328 .custom-button-orange:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #f2d708;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #ABoutRPsbs-328 .custom-button-orange:hover,
+  #AboutRPsbsr-328 .custom-button-orange:hover {
+    color: #f7f7f7;
+  }
+  #ABoutRPsbs-328 .custom-button-orange:hover:before,
+  #AboutRPsbsr-328 .custom-button-orange:hover:before {
     width: 100%;
   }
   #ABoutRPsbs-328 .cs-picture,
