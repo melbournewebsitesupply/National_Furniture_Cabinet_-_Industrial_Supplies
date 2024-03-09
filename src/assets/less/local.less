@@ -1259,7 +1259,38 @@
             width: 100%;
             max-width: (1280/16rem);
             margin: auto;
+
+
+
+   
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(2rem, 2vw, 4rem);
         }
+
+.cs-button-solid{
+        &:before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            background: #fff;
+            opacity: 1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: width .3s;
+        }
+
+        &:hover {
+            color: var(--headerColor);
+            &:before {
+                width: 100%;
+            }
+        }
+    }
 
         .cs-header {
             font-size: (25/16rem);

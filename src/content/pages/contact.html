@@ -13,83 +13,205 @@ permalink: 'contact/'
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+   <!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-    </section>
+<div id="ContactBanner-327">
+    <div class="cs-container">
+        <span class="cs-int-title">Contact</span>
+        <div class="cs-breadcrumbs">
+            <a href="" class="cs-link">Home</a>
+            <a href="" class="cs-link cs-active">Contact Us</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/Custom-Cabinet-Boston.jpeg
+        ">
+        <source media="(min-width: 601px)" srcset="/assets/images/Custom-Cabinet-Boston.jpeg
+        ">
+        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/Custom-Cabinet-Boston.jpeg
+        " alt="library" width="1920" height="375">
+    </picture>
+</div>
+<!-- ============================================ -->
+<!--                Contact Form                  -->
+<!-- ============================================ -->
 
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
-
-    <section id="cs-contact">
-        <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
-                </div>
+<section id="cs-contact-233">
+    <div class="cs-container">
+        <div class="cs-left">
+            <div class="cs-content">
+                <span class="cs-topper">Send Us a Message</span>
+                <h2 class="cs-title">Get in Touch</h2>
+                <p class="cs-text">
+                   Feel free to ask any questions through this form, or alternatively you can send an email or give us a call.
+                </p>
+            </div>
+            <form id="cs-form-233" name="Contact Form" method="post">
                 <label>
                     Name
-                    <input required type="text" id="name" name="name" placeholder="Name">
+                    <input required type="text" id="name-233" name="name" placeholder="Name">
                 </label>
                 <label>
                     Email
-                    <input required type="text" id="email" name="email" placeholder="Email">
+                    <input required type="text" id="email-233" name="email" placeholder="Email">
                 </label>
                 <label>
                     Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
+                    <input required type="text" id="phone-233" name="phone" placeholder="Phone">
                 </label>
                 <label>
                     How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
+                    <input type="text" id="find-233" name="find-us" placeholder="How did you find us?">
                 </label>
                 <label class="cs-label-message">
                     Message
-                    <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
+                    <textarea required name="Message" id="message-233" placeholder="Write message..."></textarea>
                 </label>
-                <button class="cs-button-solid" type="submit">Submit Message</button>
+                <button class="cs-button-solid cs-submit" type="submit">Submit Message</button>
             </form>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{client.address.mapLink}}">
-                    {{client.address.lineOne}},
-                    <br />
-                    {{client.address.lineTwo}},
-                    <br />
-                    <span class="cs-block">
-                        {{client.address.city}}
-                        {{client.address.state}}
-                        {{client.address.zip}}
-                    </span>
-                </a>
-
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
-                </picture>
-
-            </div>
         </div>
-    </section>
+        <div class="cs-right-section">
+            <!--Email-->
+            <span class="cs-header">Email</span>
+            <a class="cs-link" href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+            <!--Phone-->
+            <span class="cs-header">Phone</span>
+            <a class="cs-link" href="tel:219-555-1234">(219) 555-1234</a>
+            <!--Address-->
+            <span class="cs-header">Address</span>
+            <a class="cs-link" href="">60 Meadow Lane, <span class="cs-block">Newborough 3825 VIC</span></a>
+
+            <!-- Background Image-->
+            <picture class="cs-bg-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/Factory-Cabinet-Shop-Boston.jpeg">
+                <source media="(min-width: 601px)" srcset="/assets/images/Factory-Cabinet-Shop-Boston.jpeg">
+                <img loading="lazy" decoding="async" src="/assets/images/Factory-Cabinet-Shop-Boston.jpeg" alt="building" width="542" height="662" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+                                                  
+
+<!-- ============================================ -->
+<!--                Contact Strip                 -->
+<!-- ============================================ -->
+
+<!-- No headers, so no section tag -->
+<div id="ContactStrip-327">
+    <ul class="cs-stat-group">
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-grey.svg" alt="icon" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-header">Phone</span>
+                <a href="tel:555-456-7899" class="cs-link">+1 (555) 456 7899</a>
+                <a href="tel:555-456-7899" class="cs-link">+1 (555) 456 7899</a>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-grey.svg" alt="icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-header">Address</span>
+                <a href="" class="cs-link">60 Meadow Lane<br> Newborough 8255 VIC</a>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/clock-grey.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-header">Open Hours</span>
+                <span class="cs-hours">Monday To Saturday</span>
+                <span class="cs-hours">9:00 AM - 10:30 PM</span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="ContactFAQ-327">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Learn More</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="cs-flex-group">
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How long does delivery take?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                       Example Text
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How much does delivery cost?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Can I return my order if I ordered an incorrect item?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Can I pickup the order in person?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Can I get my order delivered interstate?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How can I get an update on my order and ask further questions?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+          
+
+                                
 {% endblock %}

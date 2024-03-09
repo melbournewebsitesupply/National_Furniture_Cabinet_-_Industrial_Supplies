@@ -992,13 +992,16 @@
     position: absolute;
     height: 100%;
     width: 0%;
-    background: #000;
+    background: #f7f7f7;
     opacity: 1;
     top: 0;
     left: 0;
     z-index: -1;
     border-radius: 0.25rem;
     transition: width 0.3s;
+  }
+  #cta-51 .cs-button-solid:hover {
+    color: #353535;
   }
   #cta-51 .cs-button-solid:hover:before {
     width: 100%;

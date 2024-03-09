@@ -1,117 +1,295 @@
 /* PAGE-SPECIFIC STYLES FOR THE CONTACT PAGE */
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+body.dark-mode .cs-button-solid {
+  background-color: var(--secondaryLight);
+  color: #1a1a1a;
+}
+body.dark-mode .cs-button-solid:before {
+  background-color: #fff;
+}
+.cs-button-solid {
+  font-size: 1rem;
+  /* 46px - 56px */
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  min-width: 9.375rem;
+  padding: 0 1.5rem;
+  background-color: var(--primary);
+  border-radius: 0.25rem;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  /* prevents padding from adding to the width */
+  box-sizing: border-box;
+}
+.cs-button-solid:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background: #000;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 0.25rem;
+  transition: width 0.3s;
+}
+.cs-button-solid:hover:before {
+  width: 100%;
+}
+/* ^^^ remove everything above this comment and place in global stylesheet ^^^ */
+/*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #ContactBanner-327 {
+    /* 144px - 252px */
+    padding-top: clamp(9rem, 11.8vw, 15.75rem);
+    /* 80px - 140px */
+    padding-bottom: clamp(5rem, 13vw, 8.75rem);
+    position: relative;
+    z-index: 1;
+  }
+  #ContactBanner-327 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #ContactBanner-327 .cs-int-title {
+    /* 39px - 49px */
+    font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    max-width: 43.75rem;
+    margin: 0 auto 0.75rem;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #ContactBanner-327 .cs-breadcrumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #ContactBanner-327 .cs-link {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.2em;
+    text-decoration: none;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #ContactBanner-327 .cs-link:last-of-type {
+    /* remove the chevron on the last list item */
+  }
+  #ContactBanner-327 .cs-link:last-of-type::after {
+    display: none;
+  }
+  #ContactBanner-327 .cs-link:after {
+    /* chevron - added as pseudo to make adding and removing them easier */
+    content: "";
+    width: 0.4375rem;
+    height: 0.75rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    background: url("https://csimg.nyc3.digitaloceanspaces.com/Banners/chevron-right.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #ContactBanner-327 .cs-link.cs-active {
+    color: var(--primaryLight);
+  }
+  #ContactBanner-327 .cs-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+  }
+  #ContactBanner-327 .cs-background:before {
+    /* black overlay box */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.72;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #ContactBanner-327 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
 /*-- -------------------------- -->
 <---          Contact           -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  :root {
-    /* 13px - 16px */
-    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-    /* 31px - 49px */
-    --headerFontSize: clamp(1.9375rem, 4.5vw, 3.0625rem);
-    --bodyFontSize: 1rem;
-    /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75em, 7.82vw, 6.25em) 1rem;
-  }
-  #cs-contact {
-    font-family: "Roboto", "Arial", sans-serif;
+@media only screen and (min-width: 0rem) {
+  #cs-contact-233 {
     padding: var(--sectionPadding);
   }
-  #cs-contact .cs-container {
+  #cs-contact-233 .cs-container {
     width: 100%;
-    /* changes to 1280px at desktop */
-    max-width: 50rem;
+    max-width: 80rem;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  #cs-contact .cs-content {
+  #cs-contact-233 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
     width: 100%;
+    margin: 0 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
   }
-  #cs-contact .cs-topper {
-    text-align: left;
-    /* 8px - 12px */
-    margin-bottom: clamp(0.5rem, 1.4vw, 0.75rem);
+  #cs-contact-233 #cs-form-233 {
+    width: 100%;
+    margin: 0;
   }
-  #cs-contact .cs-title {
-    text-align: left;
-    max-width: 50rem;
-  }
-  #cs-contact .cs-text {
-    text-align: left;
-    /* 404px - 522px */
-    max-width: clamp(25.25rem, 30vw, 32.625rem);
-    margin: 0 auto 0 0;
-    /* 40px - 48px */
-    margin-bottom: clamp(2.5rem, 6.3vw, 3rem);
-  }
-  #cs-contact #cs-form {
-    margin-bottom: 2.5rem;
-  }
-  #cs-contact #cs-form label {
+  #cs-contact-233 #cs-form-233 label {
     font-size: 1rem;
-    font-weight: 700;
     line-height: 1.5em;
+    font-weight: 700;
     /* 12px - 20px */
     margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
     color: var(--headerColor);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    flex-direction: column;
   }
-  #cs-contact #cs-form .cs-label-message {
-    /* 32px - 48px */
-    margin-bottom: clamp(2rem, 6.3vw, 3rem);
-  }
-  #cs-contact #cs-form input,
-  #cs-contact #cs-form textarea {
+  #cs-contact-233 #cs-form-233 input,
+  #cs-contact-233 #cs-form-233 textarea {
     font-size: 1rem;
     width: 100%;
     height: 4rem;
     margin-top: 0.25rem;
-    /* prevents border & padding from affecting height */
-    box-sizing: border-box;
     padding-left: 1.25rem;
     border: 1px solid #b4b2c7;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
+    /* prevents border & padding from affecting height */
+    box-sizing: border-box;
     transition: border 0.3s;
   }
-  #cs-contact #cs-form input:hover,
-  #cs-contact #cs-form textarea:hover {
+  #cs-contact-233 #cs-form-233 input:hover,
+  #cs-contact-233 #cs-form-233 textarea:hover {
     border: 1px solid var(--primary);
   }
-  #cs-contact #cs-form textarea {
+  #cs-contact-233 #cs-form-233 textarea {
     font-family: inherit;
-    min-height: 7.5rem;
     padding-top: 1.25rem;
+    min-height: 7.5rem;
   }
-  #cs-contact #cs-form .cs-button-solid {
+  #cs-contact-233 #cs-form-233 .cs-button-solid {
+    width: 100%;
+  }
+  #cs-contact-233 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #cs-contact-233 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #cs-contact-233 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #cs-contact-233 .cs-submit {
     width: 100%;
     border: none;
   }
-  #cs-contact .cs-right-section {
+  #cs-contact-233 .cs-submit:hover {
+    cursor: pointer;
+  }
+  #cs-contact-233 .cs-right-section {
+    position: relative;
+    width: 100%;
     height: 20rem;
     /* 24px - 40px top & bottom */
     /* 20px - 40px left & right */
     padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.5rem);
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    position: relative;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    border-radius: 0.25rem;
     /* cuts off corners on img tag */
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
   }
-  #cs-contact .cs-header {
+  #cs-contact-233 .cs-header {
     /* 16px - 20px */
     font-size: clamp(1rem, 3vw, 1.25rem);
-    font-weight: 700;
     line-height: 1.2em;
+    font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--bodyTextColorWhite);
     display: block;
   }
-  #cs-contact .cs-link {
+  #cs-contact-233 .cs-link {
     /* 16px - 20px */
     font-size: clamp(1rem, 3vw, 1.25rem);
     line-height: 1.2em;
@@ -121,7 +299,7 @@
     display: block;
     position: relative;
   }
-  #cs-contact .cs-link:before {
+  #cs-contact-233 .cs-link:before {
     /* Animated underline */
     content: "";
     width: 0%;
@@ -129,23 +307,23 @@
     /* current color of the parent */
     background: currentColor;
     opacity: 1;
-    display: block;
     position: absolute;
-    bottom: calc(-2 / 16 * 1rem);
+    display: block;
+    bottom: -0.125rem;
     left: 0;
     transition: width 0.3s;
   }
-  #cs-contact .cs-link:hover:before {
+  #cs-contact-233 .cs-link:hover:before {
     width: 100%;
   }
-  #cs-contact .cs-link:last-of-type {
+  #cs-contact-233 .cs-link:last-of-type {
     margin-bottom: 0;
   }
-  #cs-contact .cs-block {
+  #cs-contact-233 .cs-block {
     /* sends second address line to the bottom on its own line */
     display: block;
   }
-  #cs-contact .cs-bg-picture {
+  #cs-contact-233 .cs-bg-picture {
     width: 100%;
     height: 100%;
     display: block;
@@ -155,113 +333,474 @@
     z-index: -1;
     transition: transform 0.6s;
   }
-  #cs-contact .cs-bg-picture:before {
+  #cs-contact-233 .cs-bg-picture:before {
     /* background color overlay */
     content: "";
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-    display: block;
     position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
     top: 0;
     left: 0;
     z-index: 1;
   }
-  #cs-contact .cs-bg-picture img {
-    width: 100%;
-    height: 100%;
-    /* Makes img tag act as a background image */
-    object-fit: cover;
+  #cs-contact-233 .cs-bg-picture img {
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
   }
 }
 /* Tablet - 700px */
-@media only screen and (min-width: 43.75em) {
-  #cs-contact #cs-form {
+@media only screen and (min-width: 43.75rem) {
+  #cs-contact-233 #cs-form-233 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
   }
-  #cs-contact #cs-form label {
+  #cs-contact-233 #cs-form-233 label {
     width: 48%;
   }
-  #cs-contact #cs-form .cs-label-message {
+  #cs-contact-233 #cs-form-233 .cs-label-message {
     width: 100%;
   }
 }
 /* Small Desktop - 1024px */
-@media only screen and (min-width: 64em) {
-  #cs-contact .cs-container {
-    max-width: 80rem;
-    display: flex;
+@media only screen and (min-width: 64rem) {
+  #cs-contact-233 .cs-container {
+    max-width: 80em;
+    flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
-    gap: 5rem;
+    /* 80px - 108px */
+    gap: clamp(5rem, 7vw, 6.75rem);
   }
-  #cs-contact #cs-form {
-    max-width: 39.375rem;
+  #cs-contact-233 .cs-left {
+    max-width: 32.625rem;
   }
-  #cs-contact #cs-form label {
+  #cs-contact-233 #cs-form-233 label {
     width: 100%;
   }
-  #cs-contact .cs-right-section {
+  #cs-contact-233 .cs-right-section {
+    height: 50rem;
     width: 40%;
     max-width: 33.875rem;
-    /* changes to 578px at 1300px wide */
-    height: 42.875rem;
     /* prevents flexbox from squishing it */
     flex: none;
   }
-  #cs-contact .cs-right-section:hover .cs-bg-picture {
+  #cs-contact-233 .cs-right-section:hover .cs-bg-picture {
     transform: scale(1.1);
   }
-  #cs-contact .cs-block {
+  #cs-contact-233 .cs-block {
     /* goes back to inline so it stays "in line" with the rest of the text */
     display: inline-block;
   }
 }
-/* Small Desktop - 1300px */
-@media only screen and (min-width: 81.25em) {
-  #cs-contact #cs-form {
-    column-gap: 0rem;
+/*-- -------------------------- -->
+<---       Contact Strip        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #ContactStrip-327 {
+    padding: var(--sectionPadding);
+    background-color: #f7f7f7;
   }
-  #cs-contact #cs-form label {
-    width: 48%;
-    max-width: 19.0625rem;
+  #ContactStrip-327 .cs-stat-group {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 37.5rem;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
   }
-  #cs-contact #cs-form .cs-label-message {
-    max-width: 100%;
+  #ContactStrip-327 .cs-item {
+    list-style: none;
+    width: 18.125rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
-  #cs-contact .cs-right-section {
-    height: 36.125rem;
+  #ContactStrip-327 .cs-item:hover .cs-picture {
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transform: scale(1.05);
+  }
+  #ContactStrip-327 .cs-picture {
+    width: 5rem;
+    height: 5rem;
+    /* 12px - 20px */
+    margin-right: clamp(0.75rem, 3vw, 1.25rem);
+    border-radius: 50%;
+    border: 1px solid #bababa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.6s;
+  }
+  #ContactStrip-327 .cs-flex-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #ContactStrip-327 .cs-icon {
+    width: 1.75rem;
+    height: auto;
+  }
+  #ContactStrip-327 .cs-header {
+    font-size: 1.25rem;
+    color: var(--headerColor);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  #ContactStrip-327 .cs-link,
+  #ContactStrip-327 .cs-hours {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-decoration: none;
+    color: #767676;
+    display: block;
+  }
+  #ContactStrip-327 .cs-link:hover {
+    text-decoration: underline;
   }
 }
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #cs-contact .cs-text,
-  body.dark-mode #cs-contact .cs-title {
+/* Tablet - 650px */
+@media only screen and (min-width: 40.625rem) {
+  #ContactStrip-327 .cs-stat-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.25rem;
+    row-gap: 2rem;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #ContactStrip-327 .cs-stat-group {
+    max-width: 80rem;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+}
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #ContactFAQ-327 {
+    padding: var(--sectionPadding);
+  }
+  #ContactFAQ-327 .cs-container {
+    width: 100%;
+    max-width: 43.75rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #ContactFAQ-327 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #ContactFAQ-327 .cs-title {
+    margin: 0;
+  }
+  #ContactFAQ-327 .cs-faq-group {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #ContactFAQ-327 .cs-faq-item {
+    list-style: none;
+    width: 100%;
+    background-color: #f7f7f7;
+    /* clips all corners of the button that overlap the rounded border */
+    overflow: hidden;
+    border-radius: 0.75rem;
+    transition: border-bottom 0.3s;
+  }
+  #ContactFAQ-327 .cs-faq-item.active .cs-button {
+    background-color: var(--primary);
+    color: #f7f7f7;
+  }
+  #ContactFAQ-327 .cs-faq-item.active .cs-button:before {
+    background-color: #f7f7f7;
+    transform: rotate(315deg);
+  }
+  #ContactFAQ-327 .cs-faq-item.active .cs-button:after {
+    background-color: #f7f7f7;
+    transform: rotate(-315deg);
+  }
+  #ContactFAQ-327 .cs-faq-item.active .cs-item-p {
+    height: auto;
+    /* 20px - 24px top & bottom */
+    /* 16px - 24px left & right */
+    padding: clamp(1.25rem, 1.3vw, 1.5rem) clamp(1rem, 2vw, 1.5rem);
+    opacity: 1;
+  }
+  #ContactFAQ-327 .cs-button {
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-align: left;
+    font-weight: bold;
+    /* 16px - 20px */
+    padding: clamp(1rem, 1.3vw, 1.25rem);
+    background-color: #f7f7f7;
+    border: none;
+    color: var(--headerColor);
+    display: block;
+    width: 100%;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #ContactFAQ-327 .cs-button:hover {
+    cursor: pointer;
+  }
+  #ContactFAQ-327 .cs-button:before {
+    /* left line */
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--headerColor);
+    opacity: 1;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 1.5rem;
+    transform: rotate(45deg);
+    /* animate the transform from the left side of the x axis, and the center of the y */
+    transform-origin: left center;
+    transition: transform 0.5s;
+  }
+  #ContactFAQ-327 .cs-button:after {
+    /* right line */
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--headerColor);
+    opacity: 1;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 1.3125rem;
+    transform: rotate(-45deg);
+    /* animate the transform from the right side of the x axis, and the center of the y */
+    transform-origin: right center;
+    transition: transform 0.5s;
+  }
+  #ContactFAQ-327 .cs-button-text {
+    width: 80%;
+    display: block;
+  }
+  #ContactFAQ-327 .cs-item-p {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    width: 90%;
+    height: 0;
+    margin: 0;
+    /* 16px - 24px */
+    padding: 0 clamp(1rem, 2vw, 1.5rem);
+    opacity: 0;
+    color: var(--bodyTextColor);
+    /* clips the text so it doesn't show up */
+    overflow: hidden;
+    transition: opacity 0.3s, padding-bottom 0.3s;
+  }
+}
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #ContactSubscribe-327 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #ContactSubscribe-327 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #ContactSubscribe-327 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 39.375rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #ContactSubscribe-327 .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #ContactSubscribe-327 .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #ContactSubscribe-327 .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #ContactSubscribe-327 .cs-topper {
+    color: var(--secondaryLight);
+  }
+  #ContactSubscribe-327 .cs-title {
+    max-width: 20ch;
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #cs-contact #cs-form label,
-  body.dark-mode #cs-contact #cs-form input,
-  body.dark-mode #cs-contact #cs-form textarea {
+  #ContactSubscribe-327 .cs-text {
+    margin: 0 0 2rem 0;
     color: var(--bodyTextColorWhite);
-    background-color: transparent;
   }
-  body.dark-mode #cs-contact #cs-form label::placeholder,
-  body.dark-mode #cs-contact #cs-form input::placeholder,
-  body.dark-mode #cs-contact #cs-form textarea::placeholder {
-    /* lighten up the color of the text by 40%*/
-    filter: brightness(1.4);
+  #ContactSubscribe-327 .cs-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
-  body.dark-mode #cs-contact .cs-bg-picture {
-    background-color: #000;
+  #ContactSubscribe-327 .cs-input {
+    font-size: 1rem;
+    width: 100%;
+    height: clamp(2.875rem, 5.5vw, 3.5rem);
+    margin: 0;
+    padding: 0;
+    padding-left: 1.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    /* prevents padding from adding to width and height */
+    box-sizing: border-box;
+    display: block;
   }
-  body.dark-mode #cs-contact .cs-bg-picture img {
-    /* lets parent background-color bleed through and darken it */
-    opacity: 0.5;
+  #ContactSubscribe-327 .cs-input::placeholder {
+    color: #767676;
+  }
+  #ContactSubscribe-327 .cs-submit {
+    width: 100%;
+    color: var(--headerColor);
+    background-color: var(--secondaryLight);
+    border: none;
+  }
+  #ContactSubscribe-327 .cs-submit:hover {
+    cursor: pointer;
+  }
+  #ContactSubscribe-327 .cs-submit:before {
+    background-color: #fff;
+  }
+  #ContactSubscribe-327 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #ContactSubscribe-327 .cs-background:before {
+    /* black overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #ContactSubscribe-327 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #ContactSubscribe-327 .cs-container {
+    max-width: 80rem;
+  }
+  #ContactSubscribe-327 .cs-form {
+    flex-direction: row;
+  }
+  #ContactSubscribe-327 .cs-input {
+    width: 22.5rem;
+  }
+  #ContactSubscribe-327 .cs-submit {
+    width: 13.875rem;
+  }
+}
+/* Large Desktop 1300px - Parallax Scroll */
+@media only screen and (min-width: 81.25rem) {
+  #ContactSubscribe-327 {
+    background: url("https://csimg.nyc3.digitaloceanspaces.com/CTA/scale.jpg");
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  #ContactSubscribe-327 .cs-background img {
+    display: none;
   }
 }

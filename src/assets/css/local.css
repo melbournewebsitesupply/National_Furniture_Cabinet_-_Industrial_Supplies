@@ -1103,6 +1103,28 @@
     width: 100%;
     max-width: 80rem;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(2rem, 2vw, 4rem);
+  }
+  #logos-1565 .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #fff;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #logos-1565 .cs-button-solid:hover {
+    color: var(--headerColor);
+  }
+  #logos-1565 .cs-button-solid:hover:before {
+    width: 100%;
   }
   #logos-1565 .cs-header {
     font-size: 1.5625rem;
