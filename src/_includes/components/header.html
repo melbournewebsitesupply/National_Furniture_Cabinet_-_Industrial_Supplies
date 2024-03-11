@@ -84,6 +84,90 @@
               </ul>
           </div>
       </nav>
+
+
+
+
+
+
+<!--VIEW CART MOBILE BUTTON-->
+  <!--Navigation List-->
+  <nav class="cs-navVIEWCARTMOBILEBUTTON " role="navigation">
+    <!--Mobile Nav Toggle-->
+    <button class="cs-toggleVIEWCARTMOBILEBUTTON snipcart-checkout" aria-label="mobile menu toggle">
+    
+       <img class="cs-boxVIEWCARTMOBILEBUTTON" src="/assets/images/cart-shopping-svgrepo-com (2).svg" alt="">
+        
+    </button>
+    <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+    <div class="cs-ul-wrapper">
+        <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+            <li class="cs-li">
+                <a 
+                href="/" class="cs-li-link {{'cs-active' if '' == page.fileSlug}}"
+                >
+                    Home
+                </a>
+            </li>
+         <!--    <li class="cs-li">
+                <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">
+                    About
+                </a>
+            </li>-->
+            <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+            <li class="cs-li cs-dropdown" tabindex="0">
+              <a  class="cs-li-link {{ 'cs-active' if page.fileSlug in ['all_products', 'screws', 'bolts', 'abrasives',  'staples_and_nails', 'nail_coils', 'cabinet_supplies', 'pins_and_staples', 'brads_and_staples'] else '' }}
+              ">
+
+                    Product Range
+                    <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                </a>
+                <ul class="cs-drop-ul">
+                    <li class="cs-drop-li">
+                        <a href="/screws" class="cs-li-link cs-drop-link {{'cs-active' if '' == page.fileSlug}}">Screws</a>
+                    </li>
+                    <li class="cs-drop-li">
+                        <a href="/bolts" class="cs-li-link cs-drop-link">Bolts</a>
+                    </li>
+                    <li class="cs-drop-li">
+                      <a href="" class="cs-li-link cs-drop-link">Abrasives</a>
+                  </li>
+                  <li class="cs-drop-li">
+                      <a href="" class="cs-li-link cs-drop-link">Staples and Nails</a>
+                  </li>
+                  <li class="cs-drop-li">
+                      <a href="" class="cs-li-link cs-drop-link">Nail Coils</a>
+                  </li>
+                  <li class="cs-drop-li">
+                      <a href="" class="cs-li-link cs-drop-link">Cabinet Supplies</a>
+                  </li>
+                  <li class="cs-drop-li">
+                      <a href="" class="cs-li-link cs-drop-link">Pins and Staples</a>
+                  </li>
+                  <li class="cs-drop-li">
+                      <a href="" class="cs-li-link cs-drop-link">Brads and Staples</a>
+                  </li>
+                  <li class="cs-drop-li">
+                      <a href="" class="cs-li-link cs-drop-link">Rivets</a>
+                  </li>
+                  <li class="cs-drop-li">
+                      <a href="/#collection-1579" class="cs-li-link cs-drop-link">View All Products</a>
+                  </li>
+                </ul>
+            </li>
+
+            <li class="cs-li">
+                <a href="/contact"  class="cs-li-link {{'cs-active' if 'contact' == page.fileSlug}}">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
       <a href="" class="cs-button-solid cs-nav-button snipcart-checkout">View Cart</a>  
       <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
       <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">

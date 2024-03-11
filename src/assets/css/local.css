@@ -1106,7 +1106,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(2rem, 2vw, 4rem);
   }
   #logos-1565 .cs-button-solid:before {
     content: '';
