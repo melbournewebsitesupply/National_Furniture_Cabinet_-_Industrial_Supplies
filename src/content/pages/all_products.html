@@ -1,126 +1,211 @@
 ---
-title: 'Reviews'
+title: 'All Products'
 description: 'Meta description for the page'
 preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'all_products/'
 eleventyNavigation:
-    key: Reviews
-    order: 400
+    key: About Us
+    order: 200
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/reviews.css">
+    <link rel="stylesheet" href="/assets/css/products_pages.css">
+    <link rel="stylesheet" href="/assets/css/local.css" />
 {% endblock %}
 
 {% block body %}
-
     <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Our Reviews</h1>
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                  Reviews                     -->
-    <!-- ============================================ -->
-
-    <section id="reviews">
-        <div class="container">
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                </p>
-                <div class="star-group">
-                    <span class="name">B Miller<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                </p>
-                <div class="star-group">
-                    <span class="name">Vincent M.<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                </p>
-                <div class="star-group">
-                    <span class="name">Alex L.<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile-woman.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                </p>
-                <div class="star-group">
-                    <span class="name">Arrieana M.<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                </p>
-                <div class="star-group">
-                    <span class="name">Leo N.<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                </p>
-                <div class="star-group">
-                    <span class="name">Brian A.<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
+<div id="Aboutbanner-328">
+    <div class="cs-container">
+        <span class="cs-int-title">All Products</span>
+        <div class="cs-breadcrumbs">
+            <a href="/all_products" class="cs-link">Products</a>
+            <a href="" class="cs-link cs-active">All</a>
         </div>
-    </section>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/istockphoto-1351452545-612x612.jpeg">
+        <source media="(min-width: 601px)" srcset="/assets/images/istockphoto-1351452545-612x612.jpeg">
+        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/istockphoto-1351452545-612x612.jpeg" alt="library" width="1920" height="375">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                  Collection                  -->
+<!-- ============================================ -->
+
+<section id="collection-1579">
+    <div class="cs-container">
+       
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="/assets/images/robert-ruggiero-KmRxptmMl8M-unsplash.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="/assets/images/robert-ruggiero-KmRxptmMl8M-unsplash.jpg">
+                        <img loading="lazy" decoding="async"
+                                src="/assets/images/robert-ruggiero-KmRxptmMl8M-unsplash.jpg" width="365"
+                                height="201" alt="purse">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-category">Screws</span>
+                        <span class="cs-quantity">250+ Products Available</span>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="/assets/images/edge2edge-media-qHhJkxare7A-unsplash.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="/assets/images/edge2edge-media-qHhJkxare7A-unsplash.jpg">
+                        <img loading="lazy" decoding="async"
+                                src="/assets/images/edge2edge-media-qHhJkxare7A-unsplash.jpg"
+                                width="365" height="201" alt="t-shirt">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-category">Bolts</span>
+                        <span class="cs-quantity">250+ Products Available</span>
+                    </div>
+                </a>
+            </li>
+         
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="/assets/images/Flap-Discs.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="/assets/images/Flap-Discs.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="/assets/images/Flap-Discs.jpeg"
+                                width="365" height="201" alt="shoes">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-category">Abrasives</span>
+                        <span class="cs-quantity">250+ Products Available</span>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="/assets/images/s-l1200.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="/assets/images/s-l1200.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="/assets/images/s-l1200.jpeg"
+                                width="365" height="201" alt="perfume">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-category">Staples and Nails</span>
+                        <span class="cs-quantity">250+ Products Available</span>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="/assets/images/istockphoto-614977050-612x612.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="/assets/images/istockphoto-614977050-612x612.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="/assets/images/istockphoto-614977050-612x612.jpeg"
+                                width="365" height="201" alt="shoes">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-category">Nail Coils</span>
+                        <span class="cs-quantity">250+ Products Available</span>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="/assets/images/Side-Mound-Drawer-Slides-vs-Roller-Slides-1024x683.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="/assets/images/Side-Mound-Drawer-Slides-vs-Roller-Slides-1024x683.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="/assets/images/Side-Mound-Drawer-Slides-vs-Roller-Slides-1024x683.jpeg"
+                                width="365" height="201" alt="shoes">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-category">Cabinet Supplies</span>
+                        <span class="cs-quantity">250+ Products Available</span>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="/assets/images/AdobeStock_140300520.webp">
+                        <source media="(min-width: 601px)"
+                                srcset="/assets/images/AdobeStock_140300520.webp">
+                        <img loading="lazy" decoding="async"
+                                src="/assets/images/AdobeStock_140300520.webp"
+                                width="365" height="201" alt="shoes">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-category">Pins and Staples</span>
+                        <span class="cs-quantity">250+ Products Available</span>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="/assets/images/1564661289782.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="/assets/images/1564661289782.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="/assets/images/1564661289782.jpeg"
+                                width="365" height="201" alt="shoes">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-category">Brads and Staples</span>
+                        <span class="cs-quantity">250+ Products Available</span>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="/assets/images/Unravel-The-Power-Of-Rivets-Design-Types-Real-World-Applications-1024x652.png">
+                        <source media="(min-width: 601px)"
+                                srcset="/assets/images/Unravel-The-Power-Of-Rivets-Design-Types-Real-World-Applications-1024x652.png">
+                        <img loading="lazy" decoding="async"
+                                src="/assets/images/Unravel-The-Power-Of-Rivets-Design-Types-Real-World-Applications-1024x652.png"
+                                width="365" height="201" alt="shoes">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-category">Rivets</span>
+                        <span class="cs-quantity">250+ Products Available</span>
+                    </div>
+                </a>
+            </li>
+            
+            
+           
+        </ul>
+    </div>
+</section>
+
+                                
 
     {% include 'components/cta.html' %}
 
