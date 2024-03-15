@@ -199,16 +199,19 @@ body.dark-mode {
             display: flex;
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
+            align-items: center;
         }
 
         .cs-text {
+            
             margin-bottom: (16/16rem);
             &:last-of-type {
                 margin-bottom: (32/16rem);
+                
             }
         }
 
+        
         .cs-quote {
             margin: 0 0 (32/16rem) 0;
             /* 16px - 32px */
@@ -263,9 +266,23 @@ body.dark-mode {
             position: relative;
         }
 
+    .buttons-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(9.375rem, max-content)); /* Automatically fill available space */
+        gap: 0.15rem; /* Adjust gap between buttons */
+        justify-items: center; /* Center items horizontally within grid cells */  
+        max-width: 100%;
+
+    }
+
+
+    .buttons-container:last-child{
+        justify-content: flex-start;
+    }
+
         .custom-button-solid{
 
-    font-size: (14/16rem);
+    font-size: (17/16rem);
     /* 46px - 56px */
     line-height: clamp(1.875rem, 2.5vw, 3.5rem);
     text-decoration: none;
@@ -284,6 +301,9 @@ body.dark-mode {
     z-index: 1;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
+
+
+    
 
     &:before {
         content: "";
@@ -305,7 +325,15 @@ body.dark-mode {
             width: 100%;
         }
         color: #f7f7f7;
+
+
+       
     }
+
+    
+
+
+    
         }
 
         .custom-button-orange {

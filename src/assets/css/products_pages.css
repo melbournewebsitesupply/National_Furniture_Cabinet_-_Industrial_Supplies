@@ -175,7 +175,7 @@ body.dark-mode .cs-button-solid:before {
     display: flex;
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
-    align-items: flex-start;
+    align-items: center;
   }
   #ABoutRPsbs-328 .cs-text,
   #AboutRPsbsr-328 .cs-text {
@@ -239,9 +239,24 @@ body.dark-mode .cs-button-solid:before {
     height: 39.75em;
     position: relative;
   }
+  #ABoutRPsbs-328 .buttons-container,
+  #AboutRPsbsr-328 .buttons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9.375rem, max-content));
+    /* Automatically fill available space */
+    gap: 0.15rem;
+    /* Adjust gap between buttons */
+    justify-items: center;
+    /* Center items horizontally within grid cells */
+    max-width: 100%;
+  }
+  #ABoutRPsbs-328 .buttons-container:last-child,
+  #AboutRPsbsr-328 .buttons-container:last-child {
+    justify-content: flex-start;
+  }
   #ABoutRPsbs-328 .custom-button-solid,
   #AboutRPsbsr-328 .custom-button-solid {
-    font-size: 0.875rem;
+    font-size: 1.0625rem;
     /* 46px - 56px */
     line-height: clamp(1.875rem, 2.5vw, 3.5rem);
     text-decoration: none;

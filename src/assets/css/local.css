@@ -357,6 +357,14 @@
   #sbs-1560 .cs-text:last-of-type {
     margin-bottom: 2rem;
   }
+  #sbs-1560 .CENTERED-button-container {
+    width: 100%;
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   #sbs-1560 .cs-button-solid {
     font-size: 1rem;
     /* 46px - 56px */
